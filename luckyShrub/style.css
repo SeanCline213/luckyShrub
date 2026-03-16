@@ -1,15 +1,13 @@
 @import './config.css';
 
-
-@media (min-width:992px){
-    .navbarexpand-lg .navbar-nav .dropdown-menu {
-        position: absolute;
-    }
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
 }
+
 * , ::before, ::after {
     margin:  0 .1rem 0 .1rem;
-    background-color: var(--background-color);
-    color: var(--text-color);
     font-family: var(--font-family);
     text-align:var(--text-align);
     box-sizing: border-box;
@@ -18,16 +16,22 @@
 
 #welcomeHeader{
     text-align: center;
-
     margin: 40px 0 10px 0;
 }
 .container{
     justify-content: left;
     display:flex;
-    background-color: black
-
 }
-.navbar-brand, .navbar-brand>img{
+
+#align-text-top { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:20px;
+    width: 50%;
+}
+
+.navbar-brand, .navbar-brand img{
     display: inline-block;
     margin-right:1rem;
     line-height: inherit;
@@ -36,12 +40,11 @@
     background-color: inherit;
 }
 .navbar-nav, .nav-link, .nav-link>a, .nav-item.active, .nav-item.active>a, .navbar-brand>img, .navbar-brand{
-    background-color: black;
     color: white;
 }
 .navbar-nav{
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     padding: 10px 0;
 }
 .nav-link {
@@ -63,18 +66,34 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 3em;
+    text-transform: bold;
 }
 
+.box {
+  background-color: white;
+  color: black;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.box h3 {
+    border-bottom: 2px solid var(--secondary-color);
+    margin-bottom: 1rem;
+}
 
 .circle_wrapper{
-    width:310px; /* image size + border*2 */
-    height: 310px; /* image size + border*2 */
-    border: 5px solid var(--secondary-color); /* The border */
-    border-radius: 50%;      /* Makes wrapper circular */
+    width:310px; 
+    height: 310px; 
+    border: 5px solid var(--secondary-color); 
+    border-radius: 50%;     
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--secondary-color); /* Optional background behind image */
+    background-color: var(--secondary-color); 
 }
 .main-image {
     width: 300px;
@@ -87,7 +106,7 @@
     clip-path: circle(50% at 50% 50%);
 }
 #aboutUs{
-    margin: 20px 10%;
+    margin: 5em 10%;
     text-align: center;
     border-top: 2px solid var(--secondary-color);
     padding-top: 10px;
@@ -95,13 +114,19 @@
     border-bottom: 2px solid var(--secondary-color);
 }
 #listHead{
-    margin: 30px 0 10px 0;
+    margin: 30px 0 1em 0;
 }
 
 .fullbleed-list {
 list-style-type: none;
+background-size: cover;
+background-position: center;
+overflow: hidden;
 margin: 0;
-padding:0px 0 0 0;
+display: flex;
+gap: 1.25rem;
+justify-content: center;
+padding:0 0 0 0;
 }
 .fullbleed-list > li {
     margin: 0 0 0 0;
@@ -109,32 +134,38 @@ padding:0px 0 0 0;
     text-align: center;
     padding-bottom: 100px;
     border-top:8px solid rgba(160, 39, 39, 100%);
+    border-bottom:8px solid rgba(160, 39, 39, 100%);
+    border-radius:16px;
+
+}
+.fullbleed-list > li:hover {
+    border: none;
 }
 .fullbleed-list > li:nth-child(1) {
     background-image: url(landscapeDesign.jpg);
-    background-size: cover;
 }
 .fullbleed-list > li:nth-child(2) {
     background-image: url(landscapeMaintenance.jpg);
-    background-size: cover;
 }
 .fullbleed-list > li:nth-child(3) {
     background-image: url(plantingAndMulching.jpg);
-    background-size: cover;
 }
 .fullbleed-list > li:nth-child(4) {
     background-image: url(hardscaping.jpg);
-    background-size: cover;
 }
 .fullbleed-list > li:nth-child(5) {
     background-image: url(irrigationSystems.jpg);
-    background-size: cover;
 }
 .fullbleed-list > li:nth-child(6) {
     background-image: url(treeCare.jpg);
-    background-size: cover;
-
 }
 #listHead{
     text-align: center;
+}
+#footerContainer{
+    display:flex;
+    flex-direction: column;
+}
+#image-fluid{
+    width: 10 ;
 }
