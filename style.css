@@ -9,18 +9,15 @@
 * , ::before, ::after {
     margin:  0 .1rem 0 .1rem;
     font-family: var(--font-family);
-    text-align:var(--text-align);
     box-sizing: border-box;
 
 }
-
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
 #welcomeHeader{
     text-align: center;
     margin: 40px 0 10px 0;
-}
-.container{
-    justify-content: left;
-    display:flex;
 }
 
 #align-text-top { 
@@ -69,6 +66,9 @@
     margin-top: 3em;
     text-transform: bold;
 }
+.top{
+    text-align: center;
+}
 
 .box {
   background-color: white;
@@ -106,7 +106,7 @@
     clip-path: circle(50% at 50% 50%);
 }
 #aboutUs{
-    margin: 5em 10%;
+    margin: 3em 10%;
     text-align: center;
     border-top: 2px solid var(--primary-color);
     padding-top: 10px;
@@ -126,10 +126,9 @@ margin: 0;
 display: flex;
 gap: 1.25rem;
 justify-content: center;
-padding:0 0 0 0;
+padding:10px 10px 10px 10px;
 }
 .fullbleed-list > li {
-    margin: 0 0 0 0;
     padding: 0; 
     text-align: center;
     min-height: 80vh; 
@@ -173,6 +172,8 @@ padding:0 0 0 0;
 #image-fluid{
     width: 10 ;
 }
-footer {
-    margin-top: 2rem; 
+.construction{
+    text-align: center;
+    height: 100vh;
+    padding-top: 3%;
 }
